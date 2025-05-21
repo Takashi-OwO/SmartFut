@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_user.css') }}">
+    <title>Document</title>
+</head> 
+<body>
+    <div class="container">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <h2>Login</h2>
+    {{ form.hidden_tag() }}
+    <p>{{ form.username.label }} {{ form.username }}</p>
+    <p>{{ form.password.label }} {{ form.password }}</p>
+    <p>{{ form.submit }}</p>
+    <p>Não tem uma conta? <a href="{{ url_for('register') }}">Registre-se aqui</a></p>
+</form>
+</div>
+</body>
+</html>

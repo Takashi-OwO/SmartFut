@@ -1,0 +1,132 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Seções */
+section {
+    margin: 40px auto;
+    padding: 20px;
+    width: 80%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    display: block;
+    margin-left: 0 auto;
+    width: 100px;  /* Ajuste conforme necessário */
+    height: auto;
+}
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+    table {
+        font-size: 14px;
+    }
+}
+.search-form {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    align-items: center;
+}
+
+.search-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff; /* Azul */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+.reset-button {
+    background-color: #dc3545; /* Vermelho */
+}
+
+.reset-button:hover {
+    background-color: #a71d2a; /* Vermelho mais escuro */
+}
+button {
+    padding: 8px 12px;
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a71d2a; /* Vermelho mais escuro */
+}

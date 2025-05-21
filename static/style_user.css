@@ -1,0 +1,84 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('/static/images/blue.png');
+    background-size: cover;               /* A imagem cobre toda a área da tela */
+    background-position: center;          /* A imagem fica centralizada */
+    background-repeat: no-repeat;         /* Evita que a imagem se repita */
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Estilizando o formulário */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    margin: auto;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 100% da altura da tela */
+    flex-direction: column;
+}
+
+/* Estilizando mensagens flash */
+.alert {
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-danger {
+    background-color: #ffdddd;
+    color: #a94442;
+    border: 1px solid #a94442;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    animation: fadein 0.6s ease-in-out;
+}
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

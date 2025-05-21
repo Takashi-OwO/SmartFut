@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>SmartFut</title>
+</head>
+<body>
+    <header>
+        <h1>SmartFut - Estatísticas do Futebol</h1>
+        <nav>
+            <ul>
+                <li><a href="#laliga">La Liga</a></li>
+                <li><a href="#brasil">Campeonato Brasileiro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="{{ url_for('search') }}" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Buscar..." required>
+            <button type="submit">Filtrar</button>
+            <a href="{{ url_for('index') }}">
+            <button type="button" class="reset-button">Resetar Filtragem</button>
+            </a>
+        </form>
+        <form action="{{ url_for('logout') }}" method="get">
+            <button type="submit">Logout</button>
+        </form>
+
+
+
+
+        <section id="laliga">
+            <img src="/static/images/laliga_logo.jpg" alt="Logo da La Liga" class="logo">
+            <h2>Jogadores da La Liga</h2>
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Pais</th>
+                    <th>Posiçao</th>
+                    <th>Equipe</th>
+                    <th>Jogos</th>
+                    <th>Gols</th>
+                    <th>assistencia</th>
+                    <th>penaltis</th>
+                </tr>
+                {% for jogador in jogadores %}
+                <tr>
+                    <td>{{ jogador[0] }}</td>
+                    <td>{{ jogador[5] }}</td>
+                    <td>{{ jogador[4] }}</td>
+                    <td>{{ jogador[2] }}</td>
+                    <td>{{ jogador[3] }}</td>
+                    <td>{{ jogador[1] }}</td>
+                    <td>{{ jogador[6] }}</td>
+                    <td>{{ jogador[7] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <h2>Classificação da La Liga</h2>
+            <table>
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Jogos Jogados</th>
+                    <th>Pontos</th>
+                </tr>
+                {% for time in standings %}
+                <tr>
+                    <td>{{ time[1] }}</td>
+                    <td>{{ time[0] }}</td>
+                    <td>{{ time[2] }}</td>
+                    <td>{{ time[3] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+
+        <section id="brasil">
+            <img src="/static/images/br_logo.jpg" alt="Logo do Campeonato Brasileiro" class="logo">
+            <h2>Jogadores do Campeonato Brasileiro</h2>
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Pais</th>
+                    <th>Posiçao</th>
+                    <th>Equipe</th>
+                    <th>Jogos</th>
+                    <th>Gols</th>
+                    <th>assistencia</th>
+                    <th>penaltis</th>
+                </tr>
+                {% for jogador in jogadores_br %}
+                <tr>
+                    <td>{{ jogador[0] }}</td>
+                    <td>{{ jogador[5] }}</td>
+                    <td>{{ jogador[4] }}</td>
+                    <td>{{ jogador[2] }}</td>
+                    <td>{{ jogador[3] }}</td>
+                    <td>{{ jogador[1] }}</td>
+                    <td>{{ jogador[6] }}</td>
+                    <td>{{ jogador[7] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <h2>Classificação do Campeonato Brasileiro</h2>
+            <table>
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Jogos Jogados</th>
+                    <th>Pontos</th>
+                </tr>
+                {% for time in standings_br %}
+                <tr>
+                    <td>{{ time[1] }}</td>
+                    <td>{{ time[0] }}</td>
+                    <td>{{ time[2] }}</td>
+                    <td>{{ time[3] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
