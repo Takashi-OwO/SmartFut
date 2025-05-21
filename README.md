@@ -1,4 +1,4 @@
-1-acesse o site https://www.football-data.org/ e crie uma conta gratuita para conseguir uma api para poder pegar dados que vai alimentar o site
+1-acesse o site https://www.football-data.org/ e crie uma conta gratuita para conseguir uma api para poder pegar dados que vai alimentar o site.
 2-Instale Bibliotecas :
 
     flask	Framework principal para web	pip install flask
