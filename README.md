@@ -1,5 +1,6 @@
 1-acesse o site https://www.football-data.org/ e crie uma conta gratuita para conseguir uma api para poder pegar dados que vai alimentar o site
 2-Instale Bibliotecas :
+
     flask	Framework principal para web	pip install flask
     flask_sqlalchemy	ORM (banco de dados com Python)	pip install flask_sqlalchemy
     flask_login	Gerenciamento de login e sessão de usuário	pip install flask_login
@@ -9,11 +10,14 @@
     os	Módulo interno do Python para lidar com o sistema	já vem com Python
     sqlite3	Acesso manual a banco de dados SQLite	já vem com Python
     Request Serve para fazer requisições HTTP (GET, POST, etc.) a APIs e sites externos. pip install requests
+    
 3- rode os codigos :
+      
       app.py : codigo que pega dados dos 10 melhores atacantes da la liga e salva no banco de dados laliga.db
       standing_laliga: pega os 20 times da la liga e salva no banco de dados.
       Serie_A : pega os times do serie A e salva no banco de dados
       scorers_Brasil: pegas os 10 melhores jogadores da seie A
+      
 4 - rode o codigo Data.py que e o nosso site, o codigo principal
 
 
